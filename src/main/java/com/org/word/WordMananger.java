@@ -30,6 +30,7 @@ public class WordMananger {
             if(menu == 0) break;
             else if(menu == 1){
                 //see all name
+                wordCRUD.listAll();
             }
             else if(menu == 2){
                 //see all name with level

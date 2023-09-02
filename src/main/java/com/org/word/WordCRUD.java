@@ -12,6 +12,12 @@ public class WordCRUD implements ICRUD{
         this.s = s;
     }
 
+    /*
+    => 난이도(1,2,3) & 새 단어 입력 : 1 driveway
+    뜻 입력 : 차고 진입로
+    새 단어가 단어장에 추가되었습니다 !!!
+     */
+
     @Override
     public Object add() {
         System.out.print("=> 난이도(1,2,3) & 새 단어 입력 : ");
@@ -44,5 +50,22 @@ public class WordCRUD implements ICRUD{
     @Override
     public void selectOne(int num) {
 
+    }
+    /*
+    => 원하는 메뉴는? 1
+    --------------------------------
+    1 * driveway 차고 진입로
+    2 ** graceful 우아한
+    --------------------------------
+     */
+    public void listAll(){
+        System.out.println("--------------------------------");
+        for(int i=0; i<list.size(); i++){
+            System.out.print((i+1) + " ");
+            //이미 추가하면서 보여주는 함수를 만들었기 때문에 끌고와서 사용
+            System.out.println(list.get(i).toString());
+        }
+        System.out.println("--------------------------------");
+        //wordManager에서 호출하기
     }
 }
