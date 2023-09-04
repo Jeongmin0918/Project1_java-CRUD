@@ -6,7 +6,7 @@ public class WordMananger {
     Scanner s = new Scanner(System.in);
     WordCRUD wordCRUD;
     public int selectMenu(){
-        System.out.println("********************\n" +
+        System.out.print("********************\n" +
                 "1. 모든 단어 보기\n" +
                 "2. 수준별 단어 보기\n" +
                 "3. 단어 검색\n" +
@@ -15,7 +15,8 @@ public class WordMananger {
                 "6. 단어 삭제\n" +
                 "7. 파일 저장\n" +
                 "0. 나가기\n" +
-                "********************");
+                "********************\n" +
+                "=> 원하는 메뉴는? ");
         return s.nextInt();
     }
 
@@ -40,13 +41,15 @@ public class WordMananger {
             }
             else if(menu == 4){
                 //create
-                wordCRUD.addWord();
+                wordCRUD.addItem();
             }
             else if(menu == 5){
                 //modify name
+                wordCRUD.updateItem();
             }
             else if(menu == 6){
                 //delete name
+                wordCRUD.deleteItem();
             }
             else if(menu == 7){
                 //save the file
