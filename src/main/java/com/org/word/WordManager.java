@@ -2,7 +2,7 @@ package com.org.word;
 
 import java.util.Scanner;
 
-public class WordMananger {
+public class WordManager {
     Scanner s = new Scanner(System.in);
     WordCRUD wordCRUD;
     public int selectMenu(){
@@ -20,7 +20,7 @@ public class WordMananger {
         return s.nextInt();
     }
 
-    WordMananger(){
+    WordManager(){
         wordCRUD = new WordCRUD(s);
     }
     public void start() {

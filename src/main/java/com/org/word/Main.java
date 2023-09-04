@@ -2,7 +2,7 @@ package com.org.word;
 
 public class Main {
     public static void main(String[] args) {
-        new WordMananger().start();
+        new WordManager().start();
         /*
 *** 영단어 마스터 ***
 ********************
